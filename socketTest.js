@@ -1,8 +1,8 @@
 const io = require("socket.io-client");
 
 
-const userId = "425_8"; //appId_user id
-const token = "0IF6GHPKVS1747810693"; // Replace with your real session token
+const userId = "appId_UserId"
+const token = "token"; // Replace with your real session token
 
 const socket = io("https://ourhoneybee.xyz:7421", {
   path: "/socket.io",
