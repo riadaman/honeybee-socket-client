@@ -1,8 +1,8 @@
 const io = require("socket.io-client");
 
 
-const userId = "appId_UserId"
-const token = "token"; // Replace with your real session token
+const userId = "425_8"
+const token = "GVB7KRTB071747816171"; // Replace with your real session token
 
 const socket = io("https://ourhoneybee.xyz:7421", {
   path: "/socket.io",
@@ -41,6 +41,12 @@ socket.on("connect_error", (err) => {
 // Listen for the specific event
 socket.on("refresh_attendance_status", (data) => {
   console.log("refresh_attendance_status event received:", data);
+  console.log("Current Status log:", data.currentStatus)
+   if (data.currentStatus == '1') {
+    console.log("Status: IN");
+  } else {
+    console.log("Status: OUT");
+  }
 });
 
 // Listen for all events (for debugging)
